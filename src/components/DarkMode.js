@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../contexts";
 
 function DarkMode(props) {
+  const theme = useContext(ThemeContext);
   return (
     <label>
       <input
         type="checkbox"
-        value={props.value}
-        onChange={e => props.setValue(e.target.checked)}
+        // value={props.value}
+        value={theme.darkMode}
+        onChange={e => theme.setDarkMode(e.target.checked)}
+        // onChange={e => props.setValue(e.target.checked)}
       />
       <span>Dark Mode</span>
     </label>
