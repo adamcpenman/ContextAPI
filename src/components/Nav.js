@@ -1,8 +1,8 @@
 import React from "react";
 
-function Nav() {
+function Nav(props) {
   return (
-    <nav className="nav">
+    <nav className={`nav${props.isDarkMode ? "_dark" : ""}`}>
       <a href="/">Home</a>
       <a href="/">About</a>
       <a href="/">Contact</a>

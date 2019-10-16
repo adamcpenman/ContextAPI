@@ -1,10 +1,11 @@
 import React from "react";
 import logo from "../images/logo.png";
+import logoDark from "../images/logo-dark.png";
 
-function Logo() {
+function Logo(props) {
   return (
     <div className="logo">
-      <img src={logo} alt="Logo" />
+      <img src={props.isDarkMode ? logoDark : logo} alt="Logo" />
     </div>
   );
 }

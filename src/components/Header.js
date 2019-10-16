@@ -2,11 +2,11 @@ import React from "react";
 import Nav from "./Nav";
 import Logo from "./Logo";
 
-function Header() {
+function Header(props) {
   return (
     <header className="header">
-      <Logo />
-      <Nav />
+      <Logo isDarkMode={props.isDarkMode} />
+      <Nav isDarkMode={props.isDarkMode} />
     </header>
   );
 }
